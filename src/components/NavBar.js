@@ -6,11 +6,11 @@ export default function NavBar() {
                 <div class="tag-instagram">
                     <ion-icon name="logo-instagram"></ion-icon>
                     <div class="border"></div>
-                    <img class="img-instagram-desktop" src="./img/name-instagram.webp" alt="logo-desktop"/>
+                    <img class="img-instagram-desktop" src="./img/name-instagram.webp" alt="logo-desktop" />
                 </div>
-                <img class="img-instagram-mobile" src="./img/name-instagram.webp" alt="logo-mobile"/>
+                <img class="img-instagram-mobile" src="./img/name-instagram.webp" alt="logo-desktop" />
                 <div class="research-field">
-                    <input type="text" id="text-area" value="Pesquisar"/>
+                    <input type="text" id="text-area" value="Pesquisar" />
                 </div>
                 <div class="options-icons-mobile">
                     <ion-icon name="paper-plane-outline"></ion-icon>
