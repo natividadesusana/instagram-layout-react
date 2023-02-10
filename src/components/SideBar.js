@@ -5,7 +5,7 @@ export default function NavBar() {
     return (
         <div class="side-bar">
             <div class="side-bar-container">
-                <User/>
+                <User />
                 <Suggestions />
                 <div class="information">
                     <div>
@@ -14,7 +14,6 @@ export default function NavBar() {
                             Termos • Localizações • Contas mais relevantes • Hashtags •
                             Idioma
                         </p>
-
                         <p>
                             © 2021 INSTAGRAM DO FACEBOOK
                         </p>
