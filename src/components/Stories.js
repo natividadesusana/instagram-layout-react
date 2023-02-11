@@ -54,9 +54,9 @@ export default function Stories() {
     ];
 
     return (
-        <div class="stories-menu">
+        <div className="stories-menu">
             {stories.map((story) =>
-                <Story link={story.link} image={story.img} user={story.user} />
+                <Story key={story.img} link={story.link} image={story.img} user={story.user} />
             )}
 
             <ion-icon name="chevron-forward-circle-outline"></ion-icon>
@@ -66,7 +66,7 @@ export default function Stories() {
 
 function Story(props) {
     return (
-        <div class="container-story">
+        <div className="container-story">
             <div>
                 <a href={props.link} target="_blank" rel="noreferrer">
                     <img src={props.image} alt={props.image} />

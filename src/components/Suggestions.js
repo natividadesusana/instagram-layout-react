@@ -35,13 +35,13 @@ export default function Suggestions() {
 
     return (
         <>
-            <div class="paragraphs-second-session">
+            <div className="paragraphs-second-session">
                 <p>Sugestões para você</p>
                 <p>Ver tudo</p>
             </div>
 
             {suggestions.map((suggestion) =>
-                <Sugestoes link={suggestion.link} img={suggestion.img} user={suggestion.user} status={suggestion.status} />
+                <Sugestoes key={suggestion.user} link={suggestion.link} img={suggestion.img} user={suggestion.user} status={suggestion.status} />
             )}
         </>
     );
@@ -49,14 +49,14 @@ export default function Suggestions() {
 
 function Sugestoes(props) {
     return (
-        <div class="third-session">
-            <div class="img-1">
+        <div className="third-session">
+            <div className="img-1">
                 <a href={props.link} target="_blank" rel="noreferrer">
                     <img src={props.img} alt="img" />
                 </a>
                 <div>
-                    <a href={props.link} class="p-1" target="_blank" rel="noreferrer">{props.user}</a>
-                    <p class="p-2">{props.status}</p>
+                    <a href={props.link} className="p-1" target="_blank" rel="noreferrer">{props.user}</a>
+                    <p className="p-2">{props.status}</p>
                 </div>
                 <div>
                     <p>Seguir</p>

@@ -11,7 +11,7 @@ export default function User() {
     return (
         <>
             {users.map((mapUser) =>
-                <RenderUser img={mapUser.img} user={mapUser.user} name={mapUser.name} />
+                <RenderUser key={mapUser.user} img={mapUser.img} user={mapUser.user} name={mapUser.name} />
             )}
         </>
     );
@@ -34,9 +34,9 @@ function RenderUser(props) {
     };
 
     return (
-        <div class="container-1">
+        <div className="container-1">
             <img onClick={changePhoto} src={photo} alt="img" />
-            <div class="paragraphs">
+            <div className="paragraphs">
                 <a href="https://www.instagram.com/frenchie.world/" target="_blank" rel="noreferrer">{props.user}</a>
                 <div>
                     <p>{userName}</p>

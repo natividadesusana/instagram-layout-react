@@ -3,11 +3,11 @@ import Suggestions from "./Suggestions";
 
 export default function NavBar() {
     return (
-        <div class="side-bar">
-            <div class="side-bar-container">
+        <div className="side-bar">
+            <div className="side-bar-container">
                 <User />
                 <Suggestions />
-                <div class="information">
+                <div className="information">
                     <div>
                         <p>
                             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •

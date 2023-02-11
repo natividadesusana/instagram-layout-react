@@ -62,15 +62,15 @@ export default function Posts() {
 
 
     return (
-        <div class="news-feed">
+        <div className="news-feed">
 
             {posts.map((post) =>
-                <Post linkUser={post.linkUser} imageUser={post.imageUser} user={post.user} imagePost={post.imagePost} linkFollower={post.linkFollower} imageFollower={post.imageFollower} userFollower={post.userFollower} linkOthers={post.linkOthers} numberPeople={post.numberPeople} />
+                <Post key={post.imagePost} linkUser={post.linkUser} imageUser={post.imageUser} user={post.user} imagePost={post.imagePost} linkFollower={post.linkFollower} imageFollower={post.imageFollower} userFollower={post.userFollower} linkOthers={post.linkOthers} numberPeople={post.numberPeople} />
             )};
 
-            <div class="bottom-bar-mobile">
-                <div class="bottom-bar-container-mobile">
-                    <div class="bottom-bar-options-icons-mobile">
+            <div className="bottom-bar-mobile">
+                <div className="bottom-bar-container-mobile">
+                    <div className="bottom-bar-options-icons-mobile">
                         <img src="./assets/img/home-outline.svg" alt="img" />
                         <ion-icon name="search-outline"></ion-icon>
                         <ion-icon name="add-circle-outline"></ion-icon>
@@ -103,21 +103,21 @@ function Post(props) {
     }
 
     return (
-        <div class="post">
+        <div className="post">
 
-            <div class="top-post">
+            <div className="top-post">
                 <a href={props.linkUser} target="_blank" rel="noreferrer">
                     <img src={props.imageUser} alt={props.imageUser} />
                 </a>
                 <a href={props.linkUser} target="_blank" rel="noreferrer">
-                    <p class="user-name">{props.user}</p>
+                    <p className="user-name">{props.user}</p>
                 </a>
-                <p class="spots">...</p>
+                <p className="spots">...</p>
             </div>
 
-            <img onClick={() => { likePost(false) }} src={props.imagePost} alt={props.imagePost} />
+            <img onDoubleClick={() => { likePost(false) }} src={props.imagePost} alt={props.imagePost} />
 
-            <div class="end-post">
+            <div className="end-post">
                 <ion-icon name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
