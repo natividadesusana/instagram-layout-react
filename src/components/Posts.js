@@ -34,7 +34,7 @@ export default function Posts() {
             imageFollower: "./assets/img/logo-natividadesusana.jpeg",
             userFollower: " natividadesusana ",
             linkOthers: "https://www.instagram.com/p/CFu9-PAB4te/",
-            numberPeople: 2800
+            numberPeople: 10.976
         },
         {
             linkUser: "https://www.instagram.com/bruceviajante/",
@@ -94,16 +94,16 @@ function Post(props) {
     function likePost(statusLike) {
         if (heart === 'heart-outline') {
             setHeartPost('heartAnimation like')
-            setHeart('heart');
-            setColor('#FF0000');
-            setNumberLike(numberLike + 1);
+            setHeart('heart')
+            setColor('#FF0000')
+            setNumberLike(numberLike + 1)
             setTimeout(() => {
                 setHeartPost('heartAnimation')
             }, 500)
         } else if (statusLike === true) {
-            setHeart('heart-outline');
-            setColor('#000000');
-            setNumberLike(numberLike - 1);
+            setHeart('heart-outline')
+            setColor('#000000')
+            setNumberLike(numberLike - 1)
         }
     }
 
@@ -127,7 +127,7 @@ function Post(props) {
             </div>
 
             <div className="end-post">
-                <ion-icon data-test="like-post" name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
+                <ion-icon name={heart} style={{ color: color }} data-test="like-post" onClick={() => { likePost(true) }}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
                 <ion-icon data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
