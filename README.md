@@ -3,7 +3,7 @@
 
 ### *Mobile Layout*
 
-https://user-images.githubusercontent.com/95102911/218332313-de4ce459-86ff-4915-b876-1feedb31a91b.mp4?raw=true
+https://user-images.githubusercontent.com/95102911/218332313-de4ce459-86ff-4915-b876-1feedb31a91b.mp4
 
 ---
 
