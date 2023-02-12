@@ -145,7 +145,7 @@ function Post(props) {
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <ion-icon data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
+                    <ion-icon class="mark" data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
                 </div>
 
                 <div className="box-end-post-user">
