@@ -676,21 +676,10 @@ ion-icon:hover {
     margin-left: 15px;
   }
 
-  /* .stories-menu {
-    margin-bottom: 0px;
-    border-radius: none;
-    border: none;
-    background-color: #f5f5f5;
-  } */
-
   .feed {
     margin-top: -25px;
     margin-left: 1px;
   }
-
-  /* .stories-menu ion-icon {
-    display: none;
-  } */
 
   .bottom-bar-mobile {
     background-color: #ffffff;
