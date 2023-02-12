@@ -107,6 +107,16 @@ function Post(props) {
         }
     }
 
+    function likePostHeart() {
+        setHeartPost('heartAnimation like')
+        setHeart('heart')
+        setColor('#FF0000')
+        setNumberLike(numberLike + 1)
+        setTimeout(() => {
+            setHeartPost('heartAnimation')
+        }, 500)
+    }
+
     return (
         <div data-test="post" className="post">
 
@@ -124,7 +134,7 @@ function Post(props) {
             </div>
 
             <div className="box-post">
-                <img data-test="post-image" onDoubleClick={() => { likePost(false) }} src={props.imagePost} alt={props.imagePost} />
+                <img data-test="post-image" onDoubleClick={likePostHeart} src={props.imagePost} alt={props.imagePost} />
                 <ion-icon class={heartPost} name="heart"></ion-icon>
             </div>
 
