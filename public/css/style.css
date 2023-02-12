@@ -621,6 +621,15 @@ ion-icon:hover {
   .main-content-container {
     width: none;
   }
+
+  .heartAnimation.like {
+    color: white;
+    opacity: 1;
+    font-size: 200px;
+    left: 25%;
+    top: 25%;
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 614px) {
@@ -718,5 +727,14 @@ ion-icon:hover {
   .bottom-bar-options-icons-mobile img {
     width: 22px;
     height: 22px;
+  }
+
+  .heartAnimation.like {
+    color: white;
+    opacity: 1;
+    font-size: 200px;
+    left: 25%;
+    top: 25%;
+    transform: scale(1);
   }
 }
