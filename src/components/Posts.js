@@ -141,7 +141,7 @@ function Post(props) {
             <div className="end-post">
                 <div className="box-end-post">
                     <div className="box-icons">
-                        <ion-icon data-test="like-post" name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
+                        <ion-icon onClick={() => { likePost(true) }} name={heart} style={{ color: color }} data-test="like-post"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -153,7 +153,7 @@ function Post(props) {
                         <img src={props.imageFollower} alt={props.imageFollower} target="_blank" rel="noreferrer" />
                     </a>
                     <p> Curtido por <a href={props.linkFollower} target="_blank" rel="noreferrer"> {props.userFollower} </a> e
-                        <a data-test="likes-number" href={props.linkOthers} target="_blank" rel="noreferrer"> {numberLike} pessoas </a>
+                        <a href={props.linkOthers} target="_blank" rel="noreferrer" data-test="likes-number"> {numberLike} pessoas </a>
                     </p>
                 </div>
             </div>
