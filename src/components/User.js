@@ -35,12 +35,12 @@ function RenderUser(props) {
 
     return (
         <div className="container-1">
-            <img onClick={changePhoto} src={photo} alt="img" />
+            <img data-test="profile-image" onClick={changePhoto} src={photo} alt="img" />
             <div className="paragraphs">
                 <a href="https://www.instagram.com/frenchie.world/" target="_blank" rel="noreferrer">{props.user}</a>
                 <div>
-                    <p>{userName}</p>
-                    <ion-icon onClick={changeName} name="pencil-outline"></ion-icon>
+                    <p data-test="name">{userName}</p>
+                    <ion-icon data-test="edit-name" onClick={changeName} name="pencil-outline"></ion-icon>
                 </div>
 
             </div>

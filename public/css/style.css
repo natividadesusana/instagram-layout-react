@@ -569,12 +569,27 @@ ion-icon:hover {
   display: none;
 }
 
-.red {
-  background-color: red;
+.box-post {
+  position: relative;
 }
 
-.black {
-  background-color: black;
+.heartAnimation {
+  position: absolute;
+  opacity: 0;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transition: all 0.3s;
+  transform: scale(0.2);
+}
+
+.heartAnimation.like {
+  color: white;
+  opacity: 1;
+  font-size: 200px;
+  left: 35%;
+  top: 35%;
+  transform: scale(1);
 }
 
 @media (max-width: 935px) {
