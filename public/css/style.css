@@ -211,11 +211,25 @@
   align-items: center;
 }
 
+.box-top-post {
+  margin-left: 15px;
+}
+
+.top-post ion-icon {
+  margin-right: 15px;
+}
+
+.top-post ion-icon:hover {
+  color: rgb(101, 101, 101);
+  cursor: pointer;
+}
+
 .top-post {
   width: 614px;
   height: 75px;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -233,7 +247,6 @@
   width: 32px;
   height: 32px;
   border-radius: 16px;
-  margin-left: 10px;
 }
 
 .user-name {
@@ -248,25 +261,6 @@
   margin-top: 5px;
 }
 
-.spots {
-  width: 3px;
-  color: #262626;
-  margin-left: 430px;
-  margin-bottom: 5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spots:hover {
-  color: rgb(101, 101, 101);
-  cursor: pointer;
-}
-
 .post img {
   width: 100%;
   cursor: pointer;
@@ -275,14 +269,25 @@
 .end-post {
   width: 614px;
   height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.end-post ion-icon {
-  font-size: 18px;
-  border: 1.38px;
-  color: #000000;
-  margin-top: 15px;
+.box-end-post {
+  margin-right: 10px;
   margin-left: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-end-post ion-icon {
+  border: 1.38px;
+  font-size: 20px;
+  color: #000000;
 }
 
 ion-icon:hover {
@@ -290,20 +295,23 @@ ion-icon:hover {
   cursor: pointer;
 }
 
-.end-post div {
+.box-end-post-user {
+  padding-top: 10px;
+  padding-left: 10px;
+
   display: flex;
   justify-content: left;
   align-items: center;
 }
 
-.end-post img {
+.box-end-post-user img {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  margin: 8px 5px 10px 10px;
+  margin-right: 10px;
 }
 
-.end-post p {
+.box-end-post-user p {
   height: 21px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -312,7 +320,7 @@ ion-icon:hover {
   color: #000000;
 }
 
-.end-post a {
+.box-end-post-user a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -321,8 +329,12 @@ ion-icon:hover {
   color: #000000;
 }
 
-.end-post ion-icon:nth-child(4) {
-  margin-left: 490px;
+.box-icons {
+  width: 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bottom-bar {
@@ -617,7 +629,6 @@ ion-icon:hover {
   .header-container,
   .header,
   .main-content-container,
-  
   .top-post,
   .end-post,
   .main-content .feed {
@@ -626,10 +637,6 @@ ion-icon:hover {
 
   .main-content-container {
     justify-content: none;
-  }
-
-  .spots {
-    margin-left: none;
   }
 
   .end-post ion-icon:nth-child(4) {

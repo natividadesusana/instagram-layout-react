@@ -41,7 +41,7 @@ export default function Posts() {
             imageUser: "./assets/img/img-logo-bruce.jpeg",
             user: "bruceviajante",
             imagePost: "./assets/img/img-bruce-viajante.jpeg",
-            linkFollower: "https://www.instagram.com/pythonbrasil/",
+            linkFollower: " https://www.instagram.com/pythonbrasil/ ",
             imageFollower: "./assets/img/logo-python-brasil.jpeg",
             userFollower: " pythonbrasil ",
             linkOthers: "https://www.instagram.com/p/Cjs15zuuyDh/",
@@ -111,14 +111,16 @@ function Post(props) {
         <div data-test="post" className="post">
 
             <div className="top-post">
-                <a href={props.linkUser} target="_blank" rel="noreferrer">
-                    <img src={props.imageUser} alt={props.imageUser} />
-                </a>
-                <a href={props.linkUser} target="_blank" rel="noreferrer">
-                    <p className="user-name">{props.user}</p>
-                </a>
-                <p className="spots">...</p>
+                <div className="box-top-post">
+                    <a href={props.linkUser} target="_blank" rel="noreferrer">
+                        <img src={props.imageUser} alt={props.imageUser} />
+                    </a>
+                    <a href={props.linkUser} target="_blank" rel="noreferrer">
+                        <p className="user-name">{props.user}</p>
+                    </a>
 
+                </div>
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
 
             <div className="box-post">
@@ -127,20 +129,21 @@ function Post(props) {
             </div>
 
             <div className="end-post">
-                <ion-icon data-test="like-post" name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-                <ion-icon data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
-                <div>
+                <div className="box-end-post">
+                    <div className="box-icons">
+                        <ion-icon data-test="like-post" name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <ion-icon data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
+                </div>
+
+                <div className="box-end-post-user">
                     <a href={props.linkFollower} target="_blank" rel="noreferrer">
                         <img src={props.imageFollower} alt={props.imageFollower} target="_blank" rel="noreferrer" />
                     </a>
-                    <p>
-                        Curtido por
-                        <a href={props.linkFollower} target="_blank" rel="noreferrer">
-                            {props.userFollower}
-                        </a>
-                        e <a data-test="likes-number" href={props.linkOthers} target="_blank" rel="noreferrer">{numberLike} pessoas</a>
+                    <p> Curtido por <a href={props.linkFollower} target="_blank" rel="noreferrer"> {props.userFollower} </a> e
+                        <a data-test="likes-number" href={props.linkOthers} target="_blank" rel="noreferrer"> {numberLike} pessoas </a>
                     </p>
                 </div>
             </div>
