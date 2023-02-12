@@ -127,7 +127,7 @@ function Post(props) {
             </div>
 
             <div className="end-post">
-                <ion-icon name={heart} style={{ color: color }} data-test="like-post" onClick={() => { likePost(true) }}></ion-icon>
+                <ion-icon data-test="like-post" name={heart} style={{ color: color }} onClick={() => { likePost(true) }}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
                 <ion-icon data-test="save-post" onClick={() => { setbookmark(!bookmark) }} name={(bookmark === true) ? "bookmark-outline" : "bookmark"}></ion-icon>
