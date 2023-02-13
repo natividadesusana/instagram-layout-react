@@ -103,18 +103,8 @@ function Post(props) {
         } else if (statusLike === true) {
             setHeart('heart-outline')
             setColor('#000000')
-            setNumberLike(numberLike + 1)
+            setNumberLike(numberLike - 1)
         }
-    }
-
-    function likePostHeart() {
-        setHeartPost('heartAnimation like')
-        setHeart('heart')
-        setColor('#FF0000')
-        setNumberLike(numberLike + 1)
-        setTimeout(() => {
-            setHeartPost('heartAnimation')
-        }, 500)
     }
 
     return (
@@ -134,7 +124,7 @@ function Post(props) {
             </div>
 
             <div className="box-post">
-                <img data-test="post-image" onDoubleClick={likePostHeart} src={props.imagePost} alt={props.imagePost} />
+                <img data-test="post-image" onDoubleClick={likePost} src={props.imagePost} alt={props.imagePost} />
                 <ion-icon class={heartPost} name="heart"></ion-icon>
             </div>
 
