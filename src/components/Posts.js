@@ -96,14 +96,14 @@ function Post(props) {
             setHeartPost('heartAnimation like')
             setHeart('heart')
             setColor('#FF0000')
-            setNumberLike(numberLike + 1)
+            setNumberLike(numberLike + 0.001).toFixed(3)
             setTimeout(() => {
                 setHeartPost('heartAnimation')
             }, 500)
         } else if (statusLike === true) {
             setHeart('heart-outline')
             setColor('#000000')
-            setNumberLike(numberLike - 1)
+            setNumberLike(numberLike + 0.001).toFixed(3)
         }
     }
 
@@ -153,7 +153,7 @@ function Post(props) {
                         <img src={props.imageFollower} alt={props.imageFollower} target="_blank" rel="noreferrer" />
                     </a>
                     <p> Curtido por <a href={props.linkFollower} target="_blank" rel="noreferrer"> {props.userFollower} </a> e
-                       <a href={props.linkOthers} target="_blank" rel="noreferrer"> <span data-test="likes-number">{ numberLike}</span> pessoas</a>
+                       <a data-test="likes-number" href={props.linkOthers} target="_blank" rel="noreferrer"> { numberLike} pessoas</a>
                     </p>
                 </div>
             </div>
