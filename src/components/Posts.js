@@ -12,7 +12,7 @@ export default function Posts() {
             imageFollower: "./assets/img/img-responde-ai.jpeg",
             userFollower: " respondeai ",
             linkOthers: "https://www.instagram.com/p/Cj8CXhbuQwY/",
-            numberPeople: 101.523
+            numberPeople: 700
         },
         {
             linkUser: "https://www.instagram.com/natividadesusana/",
@@ -34,7 +34,7 @@ export default function Posts() {
             imageFollower: "./assets/img/logo-natividadesusana.jpeg",
             userFollower: " natividadesusana ",
             linkOthers: "https://www.instagram.com/p/CFu9-PAB4te/",
-            numberPeople: 10.976
+            numberPeople: 985
         },
         {
             linkUser: "https://www.instagram.com/bruceviajante/",
@@ -96,14 +96,14 @@ function Post(props) {
             setHeartPost('heartAnimation like')
             setHeart('heart')
             setColor('#FF0000')
-            setNumberLike(numberLike + 0.001).toFixed(3)
+            setNumberLike(numberLike + 1)
             setTimeout(() => {
                 setHeartPost('heartAnimation')
             }, 500)
         } else if (statusLike === true) {
             setHeart('heart-outline')
             setColor('#000000')
-            setNumberLike(numberLike + 0.001).toFixed(3)
+            setNumberLike(numberLike + 1)
         }
     }
 
